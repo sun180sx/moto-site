@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Таблица характеристик мотоциклов</title>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Главная</a> |
+        <a href="model.html">Yamaha YZF-R1M</a> |
+        <a href="table.html">Таблица характеристик</a>
+    </nav>
+
+    <hr>
+
+    <h1>Список мотоциклов</h1>
+
+    <h2>Настройка графика</h2>
+    <form>
+        <p><b>Значение по оси OX:</b></p>
+        <p>
+            <input type="radio" name="ox" value="type"> Тип<br><br>
+            <input type="radio" name="ox" value="country"> Страна<br><br>
+            <input type="radio" name="ox" value="year"> Год<br><br>
+        </p>
+
+        <p><b>Значение по оси OY:</b></p>
+        <p>
+            <input type="checkbox" name="oy" value="power"> Мощность<br><br>
+            <input type="checkbox" name="oy" value="volume"> Объём двигателя<br><br>
+            <input type="checkbox" name="oy" value="speed"> Максимальная скорость<br><br>
+        </p>
+
+        <p style="margin-top: 25px;">
+            <button type="button">Построить</button>
+        </p>
+    </form>
+
+    <h2>Фильтр</h2>
+    <form>
+        <p style="margin-bottom: 20px;">
+            <label>Название: <input type="text" name="name" size="25"></label>
+        </p>
+        <p style="margin-bottom: 20px;">
+            <label>Тип: <input type="text" name="type" size="25"></label>
+        </p>
+        <p style="margin-bottom: 20px;">
+            <label>Страна: <input type="text" name="country" size="25"></label>
+        </p>
+        <p style="margin-bottom: 20px;">
+            <label>Город: <input type="text" name="city" size="25"></label>
+        </p>
+        <p style="margin-bottom: 20px;">
+            Год: от <input type="number" name="year_from" style="width: 60px;"> до <input type="number" name="year_to" style="width: 60px;">
+        </p>
+        <p style="margin-bottom: 20px;">
+            Объём: от <input type="number" name="vol_from" style="width: 60px;"> до <input type="number" name="vol_to" style="width: 60px;">
+        </p>
+        <p>
+            <button type="button">Найти</button>
+        </p>
+    </form>
+
+    <h2>Сортировка</h2>
+    <form>
+        <p style="margin-bottom: 20px;">
+            <label>Первый уровень:
+                <select name="sort1">
+                    <option value="none">Нет</option>
+                    <option value="name">Название</option>
+                    <option value="type">Тип</option>
+                    <option value="country">Страна</option>
+                    <option value="year">Год</option>
+                    <option value="volume">Объём</option>
+                </select>
+            </label>
+            <input type="checkbox" name="desc1"> по убыванию
+        </p>
+
+        <p style="margin-bottom: 20px;">
+            <label>Второй уровень:
+                <select name="sort2">
+                    <option value="none">Нет</option>
+                    <option value="name">Название</option>
+                    <option value="type">Тип</option>
+                    <option value="country">Страна</option>
+                    <option value="year">Год</option>
+                    <option value="volume">Объём</option>
+                </select>
+            </label>
+            <input type="checkbox" name="desc2"> по убыванию
+        </p>
+
+        <p style="margin-bottom: 20px;">
+            <label>Третий уровень:
+                <select name="sort3">
+                    <option value="none">Нет</option>
+                    <option value="name">Название</option>
+                    <option value="type">Тип</option>
+                    <option value="country">Страна</option>
+                    <option value="year">Год</option>
+                    <option value="volume">Объём</option>
+                </select>
+            </label>
+            <input type="checkbox" name="desc3"> по убыванию
+        </p>
+
+        <p>
+            <button type="button">Сортировать</button>
+        </p>
+    </form>
+
+    <h2>Таблица характеристик</h2>
+    <table border="1" cellpadding="4" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Название</th>
+                <th>Тип</th>
+                <th>Страна</th>
+                <th>Город</th>
+                <th>Год</th>
+                <th>Объём, см³</th>
+                <th>Мощность, л.с.</th>
+                <th>Скорость, км/ч</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Ducati Panigale V4</td><td>Спортивный</td><td>Италия</td><td>Болонья</td><td>2018</td><td>1103</td><td>216</td><td>299</td></tr>
+            <tr><td>Ducati Panigale V4 S</td><td>Спортивный</td><td>Италия</td><td>Болонья</td><td>2020</td><td>1103</td><td>216</td><td>299</td></tr>
+            <tr><td>Ducati Panigale V4 R</td><td>Спортивный</td><td>Италия</td><td>Болонья</td><td>2019</td><td>998</td><td>221</td><td>299</td></tr>
+            <tr><td>Yamaha YZF-R1</td><td>Спортивный</td><td>Япония</td><td>Ивата</td><td>2020</td><td>998</td><td>200</td><td>299</td></tr>
+            <tr><td>Yamaha YZF-R1M</td><td>Спортивный</td><td>Япония</td><td>Ивата</td><td>2026</td><td>998</td><td>200</td><td>299</td></tr>
+            <tr><td>Yamaha YZF-R6</td><td>Спортивный</td><td>Япония</td><td>Ивата</td><td>2017</td><td>599</td><td>118</td><td>262</td></tr>
+            <tr><td>Honda CBR1000RR-R Fireblade SP</td><td>Спортивный</td><td>Япония</td><td>Токио</td><td>2024</td><td>1000</td><td>217</td><td>299</td></tr>
+            <tr><td>Honda CBR1000RR-R Fireblade</td><td>Спортивный</td><td>Япония</td><td>Токио</td><td>2024</td><td>1000</td><td>217</td><td>299</td></tr>
+            <tr><td>Kawasaki Ninja H2R</td><td>Спортивный</td><td>Япония</td><td>Акаси</td><td>2026</td><td>998</td><td>322</td><td>400</td></tr>
+            <tr><td>Kawasaki Ninja ZX-10R</td><td>Спортивный</td><td>Япония</td><td>Акаси</td><td>2021</td><td>998</td><td>203</td><td>299</td></tr>
+            <tr><td>BMW S 1000 RR</td><td>Спортивный</td><td>Германия</td><td>Мюнхен</td><td>2019</td><td>999</td><td>207</td><td>299</td></tr>
+            <tr><td>BMW M 1000 RR</td><td>Спортивный</td><td>Германия</td><td>Мюнхен</td><td>2021</td><td>999</td><td>212</td><td>306</td></tr>
+            <tr><td>Aprilia RSV4 1100 Factory</td><td>Спортивный</td><td>Италия</td><td>Ноале</td><td>2019</td><td>1078</td><td>217</td><td>299</td></tr>
+            <tr><td>Aprilia RSV4 RF</td><td>Спортивный</td><td>Италия</td><td>Ноале</td><td>2018</td><td>999</td><td>201</td><td>299</td></tr>
+            <tr><td>Suzuki GSX-R1000R</td><td>Спортивный</td><td>Япония</td><td>Хамамацу</td><td>2017</td><td>999</td><td>199</td><td>299</td></tr>
+            <tr><td>MV Agusta F4 RR</td><td>Спортивный</td><td>Италия</td><td>Варезе</td><td>2014</td><td>998</td><td>201</td><td>297</td></tr>
+            <tr><td>Ducati 1299 Panigale S</td><td>Спортивный</td><td>Италия</td><td>Болонья</td><td>2015</td><td>1285</td><td>205</td><td>285</td></tr>
+            <tr><td>Honda CBR600RR</td><td>Спортивный</td><td>Япония</td><td>Токио</td><td>2018</td><td>599</td><td>118</td><td>260</td></tr>
+            <tr><td>Harley-Davidson Fat Boy</td><td>Круизер</td><td>США</td><td>Милуоки</td><td>2026</td><td>1923</td><td>103</td><td>180</td></tr>
+            <tr><td>Harley-Davidson Street Glide</td><td>Круизер</td><td>США</td><td>Милуоки</td><td>2021</td><td>1868</td><td>93</td><td>170</td></tr>
+            <tr><td>Harley-Davidson Road King</td><td>Круизер</td><td>США</td><td>Милуоки</td><td>2020</td><td>1868</td><td>93</td><td>170</td></tr>
+            <tr><td>Harley-Davidson Softail Slim</td><td>Круизер</td><td>США</td><td>Милуоки</td><td>2018</td><td>1746</td><td>86</td><td>160</td></tr>
+            <tr><td>Indian Chief Dark Horse</td><td>Круизер</td><td>США</td><td>Спирит-Лейк</td><td>2021</td><td>1890</td><td>116</td><td>175</td></tr>
+            <tr><td>Indian Scout Bobber</td><td>Круизер</td><td>США</td><td>Спирит-Лейк</td><td>2020</td><td>1133</td><td>100</td><td>170</td></tr>
+            <tr><td>Honda Gold Wing</td><td>Туристический</td><td>Япония</td><td>Токио</td><td>2018</td><td>1833</td><td>126</td><td>200</td></tr>
+            <tr><td>BMW K 1600 GTL</td><td>Туристический</td><td>Германия</td><td>Мюнхен</td><td>2021</td><td>1649</td><td>160</td><td>200</td></tr>
+            <tr><td>Yamaha Star Venture</td><td>Туристический</td><td>Япония</td><td>Ивата</td><td>2018</td><td>1854</td><td>85</td><td>170</td></tr>
+            <tr><td>Kawasaki Vulcan 1700 Voyager</td><td>Туристический</td><td>Япония</td><td>Акаси</td><td>2019</td><td>1700</td><td>73</td><td>170</td></tr>
+            <tr><td>Ducati Multistrada V4 S</td><td>Спорт-туристический</td><td>Италия</td><td>Болонья</td><td>2021</td><td>1158</td><td>170</td><td>250</td></tr>
+            <tr><td>BMW R 1250 GS</td><td>Спорт-туристический</td><td>Германия</td><td>Мюнхен</td><td>2019</td><td>1254</td><td>136</td><td>200</td></tr>
+            <tr><td>BMW R 1250 GS Adventure</td><td>Спорт-туристический</td><td>Германия</td><td>Мюнхен</td><td>2019</td><td>1254</td><td>136</td><td>200</td></tr>
+            <tr><td>KTM 1290 Super Duke GT</td><td>Спорт-туристический</td><td>Австрия</td><td>Маттигхофен</td><td>2019</td><td>1301</td><td>175</td><td>240</td></tr>
+            <tr><td>Yamaha Tracer 900 GT</td><td>Спорт-туристический</td><td>Япония</td><td>Ивата</td><td>2019</td><td>847</td><td>115</td><td>220</td></tr>
+            <tr><td>Kawasaki Ninja 1000SX</td><td>Спорт-туристический</td><td>Япония</td><td>Акаси</td><td>2021</td><td>1043</td><td>142</td><td>240</td></tr>
+            <tr><td>Suzuki GSX-S1000GT</td><td>Спорт-туристический</td><td>Япония</td><td>Хамамацу</td><td>2022</td><td>999</td><td>152</td><td>240</td></tr>
+            <tr><td>KTM 450 EXC-F</td><td>Эндуро</td><td>Австрия</td><td>Маттигхофен</td><td>2026</td><td>450</td><td>63</td><td>130</td></tr>
+            <tr><td>KTM 500 EXC-F</td><td>Эндуро</td><td>Австрия</td><td>Маттигхофен</td><td>2021</td><td>510</td><td>63</td><td>140</td></tr>
+            <tr><td>Honda CRF450R</td><td>Эндуро</td><td>Япония</td><td>Токио</td><td>2021</td><td>449</td><td>58</td><td>120</td></tr>
+            <tr><td>Yamaha WR450F</td><td>Эндуро</td><td>Япония</td><td>Ивата</td><td>2021</td><td>450</td><td>53</td><td>130</td></tr>
+            <tr><td>Kawasaki KX450</td><td>Эндуро</td><td>Япония</td><td>Акаси</td><td>2021</td><td>449</td><td>53</td><td>120</td></tr>
+            <tr><td>Husqvarna FE 501</td><td>Эндуро</td><td>Австрия</td><td>Маттигхофен</td><td>2021</td><td>510</td><td>63</td><td>140</td></tr>
+            <tr><td>Beta RR 480</td><td>Эндуро</td><td>Италия</td><td>Флоренция</td><td>2021</td><td>478</td><td>56</td><td>130</td></tr>
+            <tr><td>Zero SR/F</td><td>Электроцикл</td><td>США</td><td>Скоттс-Вэлли</td><td>2020</td><td>0</td><td>110</td><td>200</td></tr>
+            <tr><td>Zero DSR</td><td>Электроцикл</td><td>США</td><td>Скоттс-Вэлли</td><td>2021</td><td>0</td><td>70</td><td>160</td></tr>
+            <tr><td>LiveWire One</td><td>Электроцикл</td><td>США</td><td>Милуоки</td><td>2021</td><td>0</td><td>105</td><td>177</td></tr>
+            <tr><td>Energica Eva Ribelle</td><td>Электроцикл</td><td>Италия</td><td>Модена</td><td>2020</td><td>0</td><td>145</td><td>200</td></tr>
+            <tr><td>Harley-Davidson LiveWire</td><td>Электроцикл</td><td>США</td><td>Милуоки</td><td>2020</td><td>0</td><td>105</td><td>177</td></tr>
+            <tr><td>Damon Hypersport</td><td>Электроцикл</td><td>Канада</td><td>Ванкувер</td><td>2021</td><td>0</td><td>200</td><td>320</td></tr>
+            <tr><td>Lightning LS-218</td><td>Электроцикл</td><td>США</td><td>Сан-Хосе</td><td>2014</td><td>0</td><td>200</td><td>350</td></tr>
+            <tr><td>Ducati Scrambler Icon</td><td>Ретро</td><td>Италия</td><td>Болонья</td><td>2019</td><td>803</td><td>73</td><td>180</td></tr>
+            <tr><td>Triumph Bonneville T120</td><td>Ретро</td><td>Великобритания</td><td>Хинкли</td><td>2019</td><td>1200</td><td>80</td><td>180</td></tr>
+            <tr><td>Triumph Thruxton R</td><td>Ретро</td><td>Великобритания</td><td>Хинкли</td><td>2019</td><td>1200</td><td>97</td><td>200</td></tr>
+            <tr><td>Royal Enfield Interceptor 650</td><td>Ретро</td><td>Индия</td><td>Ченнаи</td><td>2018</td><td>648</td><td>47</td><td>170</td></tr>
+            <tr><td>Moto Guzzi V7 III</td><td>Ретро</td><td>Италия</td><td>Мандэлло-дель-Ларио</td><td>2019</td><td>744</td><td>52</td><td>160</td></tr>
+        </tbody>
+    </table>
+
+    <p><i>Итого: 53 модели мотоциклов</i></p>
+
+    <hr>
+
+    <footer>
+        <p>Группа: Прогин 1-2 | Разработчик: Санников Н.С. | 2026</p>
+    </footer>
+
+</body>
+</html>
