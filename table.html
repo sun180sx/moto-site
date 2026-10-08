@@ -20,43 +20,69 @@
     <form>
         <p><b>Значение по оси OX:</b></p>
         <p>
-            <input type="radio" name="ox" value="type"> Тип<br><br>
-            <input type="radio" name="ox" value="country"> Страна<br><br>
-            <input type="radio" name="ox" value="year"> Год<br><br>
+            <input type="radio" id="ox_type" name="ox" value="type">
+            <label for="ox_type">Тип</label><br><br>
+
+            <input type="radio" id="ox_country" name="ox" value="country">
+            <label for="ox_country">Страна</label><br><br>
+
+            <input type="radio" id="ox_year" name="ox" value="year">
+            <label for="ox_year">Год</label><br><br>
         </p>
 
         <p><b>Значение по оси OY:</b></p>
         <p>
-            <input type="checkbox" name="oy" value="power"> Мощность<br><br>
-            <input type="checkbox" name="oy" value="volume"> Объём двигателя<br><br>
-            <input type="checkbox" name="oy" value="speed"> Максимальная скорость<br><br>
+            <input type="checkbox" id="oy_min_power" name="oy" value="min_power">
+            <label for="oy_power">Минимальная мощность</label><br><br>
+
+            <input type="checkbox" id="oy_avr_power" name="oy" value="avr_power">
+            <label for="oy_volume">Средняя мощность</label><br><br>
+
+            <input type="checkbox" id="oy_max_power" name="oy" value="max_power">
+            <label for="oy_speed">Максимальная мощность</label><br><br>
         </p>
 
-        <p style="margin-top: 25px;">
+        <p>
             <button type="button">Построить</button>
         </p>
     </form>
 
     <h2>Фильтр</h2>
     <form>
-        <p style="margin-bottom: 20px;">
-            <label>Название: <input type="text" name="name" size="25"></label>
+        <p>
+            <label for="field_name">Название:</label>
+            <input type="text" id="field_name" name="name" size="25">
         </p>
-        <p style="margin-bottom: 20px;">
-            <label>Тип: <input type="text" name="type" size="25"></label>
+        <br>
+
+        <p>
+            <label for="field_type">Тип:</label>
+            <input type="text" id="field_type" name="type" size="25">
         </p>
-        <p style="margin-bottom: 20px;">
-            <label>Страна: <input type="text" name="country" size="25"></label>
+        <br>
+
+        <p>
+            <label for="field_country">Страна:</label>
+            <input type="text" id="field_country" name="country" size="25">
         </p>
-        <p style="margin-bottom: 20px;">
-            <label>Город: <input type="text" name="city" size="25"></label>
+        <br>
+
+        <p>
+            <label for="field_city">Город:</label>
+            <input type="text" id="field_city" name="city" size="25">
         </p>
-        <p style="margin-bottom: 20px;">
-            Год: от <input type="number" name="year_from" style="width: 60px;"> до <input type="number" name="year_to" style="width: 60px;">
+        <br>
+
+        <p>
+            Год: от <input type="number" id="field_year_from" name="year_from" min="1900" max="2026"> до <input type="number" id="field_year_to" name="year_to" min="1900" max="2026">
         </p>
-        <p style="margin-bottom: 20px;">
-            Объём: от <input type="number" name="vol_from" style="width: 60px;"> до <input type="number" name="vol_to" style="width: 60px;">
+        <br>
+
+        <p>
+            Объём: от <input type="number" id="field_vol_from" name="vol_from" min="0" max="2500"> до <input type="number" id="field_vol_to" name="vol_to" min="0" max="2500">
         </p>
+        <br>
+
         <p>
             <button type="button">Найти</button>
         </p>
@@ -64,47 +90,50 @@
 
     <h2>Сортировка</h2>
     <form>
-        <p style="margin-bottom: 20px;">
-            <label>Первый уровень:
-                <select name="sort1">
-                    <option value="none">Нет</option>
-                    <option value="name">Название</option>
-                    <option value="type">Тип</option>
-                    <option value="country">Страна</option>
-                    <option value="year">Год</option>
-                    <option value="volume">Объём</option>
-                </select>
-            </label>
-            <input type="checkbox" name="desc1"> по убыванию
+        <p>
+            <label for="field_sort1">Первый уровень:</label>
+            <select id="field_sort1" name="sort1">
+                <option value="none">Нет</option>
+                <option value="name">Название</option>
+                <option value="type">Тип</option>
+                <option value="country">Страна</option>
+                <option value="year">Год</option>
+                <option value="volume">Объём</option>
+            </select>
+            <input type="checkbox" id="field_desc1" name="desc1">
+            <label for="field_desc1">по убыванию</label>
         </p>
+        <br>
 
-        <p style="margin-bottom: 20px;">
-            <label>Второй уровень:
-                <select name="sort2">
-                    <option value="none">Нет</option>
-                    <option value="name">Название</option>
-                    <option value="type">Тип</option>
-                    <option value="country">Страна</option>
-                    <option value="year">Год</option>
-                    <option value="volume">Объём</option>
-                </select>
-            </label>
-            <input type="checkbox" name="desc2"> по убыванию
+        <p>
+            <label for="field_sort2">Второй уровень:</label>
+            <select id="field_sort2" name="sort2">
+                <option value="none">Нет</option>
+                <option value="name">Название</option>
+                <option value="type">Тип</option>
+                <option value="country">Страна</option>
+                <option value="year">Год</option>
+                <option value="volume">Объём</option>
+            </select>
+            <input type="checkbox" id="field_desc2" name="desc2">
+            <label for="field_desc2">по убыванию</label>
         </p>
+        <br>
 
-        <p style="margin-bottom: 20px;">
-            <label>Третий уровень:
-                <select name="sort3">
-                    <option value="none">Нет</option>
-                    <option value="name">Название</option>
-                    <option value="type">Тип</option>
-                    <option value="country">Страна</option>
-                    <option value="year">Год</option>
-                    <option value="volume">Объём</option>
-                </select>
-            </label>
-            <input type="checkbox" name="desc3"> по убыванию
+        <p>
+            <label for="field_sort3">Третий уровень:</label>
+            <select id="field_sort3" name="sort3">
+                <option value="none">Нет</option>
+                <option value="name">Название</option>
+                <option value="type">Тип</option>
+                <option value="country">Страна</option>
+                <option value="year">Год</option>
+                <option value="volume">Объём</option>
+            </select>
+            <input type="checkbox" id="field_desc3" name="desc3">
+            <label for="field_desc3">по убыванию</label>
         </p>
+        <br>
 
         <p>
             <button type="button">Сортировать</button>
